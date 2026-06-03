@@ -1,0 +1,314 @@
+[
+  {
+    "screenId": "e7ddae9dbda94a538b301881c7e4fec0",
+    "screenTitle": "Gameplay - CircuitDash Lite",
+    "deviceType": "DESKTOP",
+    "elements": [
+      {
+        "type": "button",
+        "label": "RESTART",
+        "line": 155
+      },
+      {
+        "type": "button",
+        "label": "pause",
+        "line": 159
+      },
+      {
+        "type": "button",
+        "label": "settings",
+        "line": 163
+      },
+      {
+        "type": "button",
+        "label": "EXIT",
+        "line": 168
+      },
+      {
+        "type": "button",
+        "label": "START_GAME",
+        "line": 212
+      },
+      {
+        "type": "button",
+        "label": "RESUME_LINK",
+        "line": 229
+      },
+      {
+        "type": "button",
+        "label": "RESTART_SEQ",
+        "line": 232
+      },
+      {
+        "type": "button",
+        "label": "ABORT",
+        "line": 235
+      }
+    ],
+    "navigation": [],
+    "buttons": [
+      {
+        "type": "button",
+        "label": "RESTART",
+        "line": 155
+      },
+      {
+        "type": "button",
+        "label": "pause",
+        "line": 159
+      },
+      {
+        "type": "button",
+        "label": "settings",
+        "line": 163
+      },
+      {
+        "type": "button",
+        "label": "EXIT",
+        "line": 168
+      },
+      {
+        "type": "button",
+        "label": "START_GAME",
+        "line": 212
+      },
+      {
+        "type": "button",
+        "label": "RESUME_LINK",
+        "line": 229
+      },
+      {
+        "type": "button",
+        "label": "RESTART_SEQ",
+        "line": 232
+      },
+      {
+        "type": "button",
+        "label": "ABORT",
+        "line": 235
+      }
+    ],
+    "inputs": [],
+    "hardcodedData": [],
+    "totalInteractive": 8,
+    "requiresRouter": false,
+    "requiresDragDrop": false
+  },
+  {
+    "screenId": "8ac2b5d7c5bc400fada18483995ca29c",
+    "screenTitle": "Game Settings - CircuitDash Lite",
+    "deviceType": "DESKTOP",
+    "elements": [
+      {
+        "type": "link",
+        "label": "LVL_04",
+        "href": "#",
+        "line": 250
+      },
+      {
+        "type": "link",
+        "label": "SPD_X2",
+        "href": "#",
+        "line": 251
+      },
+      {
+        "type": "link",
+        "label": "RESTART",
+        "href": "#",
+        "line": 276
+      },
+      {
+        "type": "link",
+        "label": "pause",
+        "href": "#",
+        "line": 280
+      },
+      {
+        "type": "link",
+        "label": "settings",
+        "href": "#",
+        "line": 284
+      },
+      {
+        "type": "link",
+        "label": "EXIT",
+        "href": "#",
+        "line": 288
+      },
+      {
+        "type": "link",
+        "label": "V-SYNC",
+        "href": "#",
+        "line": 409
+      },
+      {
+        "type": "link",
+        "label": "BUFFER_NORMAL",
+        "href": "#",
+        "line": 410
+      },
+      {
+        "type": "button",
+        "label": "OVERDRIVE",
+        "line": 294
+      },
+      {
+        "type": "button",
+        "label": "close",
+        "line": 307
+      },
+      {
+        "type": "button",
+        "label": "LITE",
+        "line": 320
+      },
+      {
+        "type": "button",
+        "label": "NORMAL",
+        "line": 321
+      },
+      {
+        "type": "button",
+        "label": "OVERDRIVE",
+        "line": 325
+      },
+      {
+        "type": "button",
+        "label": "RESET PREFERENCES",
+        "line": 391
+      },
+      {
+        "type": "button",
+        "label": "RETURN TO GAME",
+        "line": 393
+      },
+      {
+        "type": "button",
+        "label": "PREFERENCES",
+        "line": 394
+      },
+      {
+        "type": "input",
+        "label": "range",
+        "inputType": "range",
+        "line": 338
+      },
+      {
+        "type": "input",
+        "label": "range",
+        "inputType": "range",
+        "line": 361
+      }
+    ],
+    "navigation": [
+      {
+        "type": "link",
+        "label": "LVL_04",
+        "href": "#",
+        "line": 250
+      },
+      {
+        "type": "link",
+        "label": "SPD_X2",
+        "href": "#",
+        "line": 251
+      },
+      {
+        "type": "link",
+        "label": "RESTART",
+        "href": "#",
+        "line": 276
+      },
+      {
+        "type": "link",
+        "label": "pause",
+        "href": "#",
+        "line": 280
+      },
+      {
+        "type": "link",
+        "label": "settings",
+        "href": "#",
+        "line": 284
+      },
+      {
+        "type": "link",
+        "label": "EXIT",
+        "href": "#",
+        "line": 288
+      },
+      {
+        "type": "link",
+        "label": "V-SYNC",
+        "href": "#",
+        "line": 409
+      },
+      {
+        "type": "link",
+        "label": "BUFFER_NORMAL",
+        "href": "#",
+        "line": 410
+      }
+    ],
+    "buttons": [
+      {
+        "type": "button",
+        "label": "OVERDRIVE",
+        "line": 294
+      },
+      {
+        "type": "button",
+        "label": "close",
+        "line": 307
+      },
+      {
+        "type": "button",
+        "label": "LITE",
+        "line": 320
+      },
+      {
+        "type": "button",
+        "label": "NORMAL",
+        "line": 321
+      },
+      {
+        "type": "button",
+        "label": "OVERDRIVE",
+        "line": 325
+      },
+      {
+        "type": "button",
+        "label": "RESET PREFERENCES",
+        "line": 391
+      },
+      {
+        "type": "button",
+        "label": "RETURN TO GAME",
+        "line": 393
+      },
+      {
+        "type": "button",
+        "label": "PREFERENCES",
+        "line": 394
+      }
+    ],
+    "inputs": [
+      {
+        "type": "input",
+        "label": "range",
+        "inputType": "range",
+        "line": 338
+      },
+      {
+        "type": "input",
+        "label": "range",
+        "inputType": "range",
+        "line": 361
+      }
+    ],
+    "hardcodedData": [],
+    "totalInteractive": 18,
+    "requiresRouter": false,
+    "requiresDragDrop": false
+  }
+]
