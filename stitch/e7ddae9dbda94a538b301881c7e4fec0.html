@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>CIRCUIT_DASH_LITE // SURF_GAMEPLAY</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@600;700&amp;family=JetBrains+Mono:wght@400;500;700&amp;family=Inter:wght@400&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              "colors": {
+                      "surface-container-highest": "#35343a",
+                      "surface-bright": "#39383e",
+                      "tertiary-fixed-dim": "#2ae500",
+                      "on-secondary-fixed": "#3a0033",
+                      "surface-container-low": "#1b1b20",
+                      "outline-variant": "#3b494b",
+                      "tertiary-container": "#33fb0a",
+                      "surface": "#131318",
+                      "on-tertiary": "#053900",
+                      "on-primary-container": "#006970",
+                      "secondary-fixed": "#ffd7f0",
+                      "background": "#131318",
+                      "on-primary": "#00363a",
+                      "tertiary": "#e1ffd1",
+                      "inverse-primary": "#006970",
+                      "error-container": "#93000a",
+                      "on-secondary": "#5e0053",
+                      "on-primary-fixed": "#002022",
+                      "surface-container": "#1f1f25",
+                      "primary-fixed": "#7df4ff",
+                      "on-secondary-fixed-variant": "#840076",
+                      "surface-variant": "#35343a",
+                      "outline": "#849495",
+                      "surface-tint": "#00dbe9",
+                      "on-error-container": "#ffdad6",
+                      "inverse-on-surface": "#303036",
+                      "on-error": "#690005",
+                      "surface-container-high": "#2a292f",
+                      "on-background": "#e4e1e9",
+                      "surface-dim": "#131318",
+                      "on-secondary-container": "#520049",
+                      "primary-fixed-dim": "#00dbe9",
+                      "on-surface": "#e4e1e9",
+                      "error": "#ffb4ab",
+                      "on-tertiary-fixed": "#022100",
+                      "on-surface-variant": "#b9cacb",
+                      "secondary-container": "#ff24e4",
+                      "surface-container-lowest": "#0e0e13",
+                      "secondary-fixed-dim": "#fface8",
+                      "secondary": "#fface8",
+                      "inverse-surface": "#e4e1e9",
+                      "on-primary-fixed-variant": "#004f54",
+                      "primary-container": "#00f0ff",
+                      "on-tertiary-container": "#106e00",
+                      "primary": "#dbfcff",
+                      "tertiary-fixed": "#79ff5b",
+                      "on-tertiary-fixed-variant": "#095300"
+              },
+              "borderRadius": {
+                      "DEFAULT": "0.125rem",
+                      "lg": "0.25rem",
+                      "xl": "0.5rem",
+                      "full": "0.75rem"
+              },
+              "spacing": {
+                      "unit": "4px",
+                      "margin-desktop": "32px",
+                      "container-max": "1280px",
+                      "margin-mobile": "16px",
+                      "gutter": "16px"
+              },
+              "fontFamily": {
+                      "display-lg": ["Space Grotesk"],
+                      "label-tech": ["JetBrains Mono"],
+                      "body-md": ["Inter"],
+                      "display-lg-mobile": ["Space Grotesk"],
+                      "headline-md": ["Space Grotesk"],
+                      "score-display": ["JetBrains Mono"]
+              },
+              "fontSize": {
+                      "display-lg": ["48px", {"lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                      "label-tech": ["14px", {"lineHeight": "20px", "letterSpacing": "0.1em", "fontWeight": "500"}],
+                      "body-md": ["16px", {"lineHeight": "24px", "letterSpacing": "0em", "fontWeight": "400"}],
+                      "display-lg-mobile": ["32px", {"lineHeight": "40px", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                      "headline-md": ["24px", {"lineHeight": "32px", "letterSpacing": "0.05em", "fontWeight": "600"}],
+                      "score-display": ["20px", {"lineHeight": "24px", "letterSpacing": "0.02em", "fontWeight": "700"}]
+              }
+      },
+          },
+        }
+    </script>
+<style>
+        .grid-bg {
+            background-size: 40px 40px;
+            background-image: 
+                linear-gradient(to right, rgba(0, 219, 233, 0.05) 1px, transparent 1px),
+                linear-gradient(to bottom, rgba(0, 219, 233, 0.05) 1px, transparent 1px);
+        }
+        .glow-sm { box-shadow: 0 0 10px rgba(0, 219, 233, 0.3); }
+        .glow-md { box-shadow: 0 0 15px rgba(0, 219, 233, 0.5); }
+        .glow-pulse { animation: pulse 2s infinite; }
+        @keyframes pulse {
+            0% { box-shadow: 0 0 10px rgba(0, 219, 233, 0.3); }
+            50% { box-shadow: 0 0 20px rgba(0, 219, 233, 0.6); }
+            100% { box-shadow: 0 0 10px rgba(0, 219, 233, 0.3); }
+        }
+        .scanline {
+            background: linear-gradient(to bottom, rgba(255,255,255,0), rgba(255,255,255,0) 50%, rgba(0,0,0,0.1) 50%, rgba(0,0,0,0.1));
+            background-size: 100% 4px;
+            pointer-events: none;
+        }
+    </style>
+</head>
+<body class="bg-background text-on-surface h-screen w-screen overflow-hidden flex font-body-md relative">
+<!-- Top Navigation (HUD) -->
+<nav class="fixed top-0 left-0 w-full z-50 flex justify-between items-center px-margin-desktop md:px-margin-desktop px-margin-mobile h-16 bg-surface/80 backdrop-blur-xl border-b border-primary/30 shadow-[0_0_10px_rgba(0,219,233,0.3)]">
+<div class="font-display-lg md:font-display-lg text-display-lg md:text-display-lg text-primary-container tracking-tighter">
+            CIRCUIT_DASH_LITE
+        </div>
+<div class="hidden md:flex gap-8 items-center">
+<div class="flex items-center gap-2">
+<span class="font-label-tech text-label-tech text-outline-variant uppercase">SCORE:</span>
+<span class="font-score-display text-score-display text-primary-container font-bold glow-sm">12,450</span>
+</div>
+<div class="flex items-center gap-2 border-l border-primary/30 pl-8">
+<span class="font-label-tech text-label-tech text-outline-variant uppercase">HI_SCORE:</span>
+<span class="font-score-display text-score-display text-primary">99,420</span>
+</div>
+<div class="flex items-center gap-2 border-l border-primary/30 pl-8">
+<span class="font-label-tech text-label-tech text-outline-variant uppercase">LVL_04</span>
+</div>
+<div class="flex items-center gap-2 border-l border-primary/30 pl-8">
+<span class="font-label-tech text-label-tech text-outline-variant uppercase">SPD_X2</span>
+</div>
+</div>
+<div class="md:hidden flex flex-col items-end">
+<div class="font-score-display text-score-display text-primary-container">12,450</div>
+<div class="font-label-tech text-[10px] text-outline-variant">HI: 99,420</div>
+</div>
+</nav>
+<!-- Side Navigation (Web Only) -->
+<aside class="hidden md:flex fixed left-0 top-0 h-full z-40 flex-col items-center py-24 gap-gutter bg-surface-container-low/60 backdrop-blur-lg border-r border-secondary/20 w-20">
+<div class="mb-8 flex flex-col items-center gap-2">
+<div aria-label="User HUD Avatar" class="w-10 h-10 rounded-full border border-secondary flex items-center justify-center bg-secondary/10 relative">
+<span class="material-symbols-outlined text-secondary text-lg">face</span>
+</div>
+<span class="font-label-tech text-[10px] text-secondary/70">OP_01</span>
+</div>
+<button class="w-12 h-12 rounded-lg flex flex-col items-center justify-center gap-1 text-secondary/50 hover:text-secondary hover:bg-secondary/10 transition-all duration-150 ease-in-out group relative">
+<span class="material-symbols-outlined text-xl">refresh</span>
+<span class="font-label-tech text-[8px] opacity-0 group-hover:opacity-100 absolute -right-16 bg-surface px-2 py-1 border border-secondary/30 rounded">RESTART</span>
+</button>
+<button class="w-12 h-12 rounded-lg flex flex-col items-center justify-center gap-1 text-secondary/50 hover:text-secondary hover:bg-secondary/10 transition-all duration-150 ease-in-out group relative">
+<span class="material-symbols-outlined text-xl">pause</span>
+<span class="font-label-tech text-[8px] opacity-0 group-hover:opacity-100 absolute -right-14 bg-surface px-2 py-1 border border-secondary/30 rounded">PAUSE</span>
+</button>
+<button class="w-12 h-12 rounded-lg flex flex-col items-center justify-center gap-1 text-secondary/50 hover:text-secondary hover:bg-secondary/10 transition-all duration-150 ease-in-out group relative">
+<span class="material-symbols-outlined text-xl">settings</span>
+<span class="font-label-tech text-[8px] opacity-0 group-hover:opacity-100 absolute -right-16 bg-surface px-2 py-1 border border-secondary/30 rounded">SETTINGS</span>
+</button>
+<div class="mt-auto">
+<button class="w-12 h-12 rounded-lg flex flex-col items-center justify-center gap-1 text-secondary/50 hover:text-secondary hover:bg-secondary/10 transition-all duration-150 ease-in-out group relative">
+<span class="material-symbols-outlined text-xl">power_settings_new</span>
+<span class="font-label-tech text-[8px] opacity-0 group-hover:opacity-100 absolute -right-12 bg-surface px-2 py-1 border border-secondary/30 rounded">EXIT</span>
+</button>
+</div>
+</aside>
+<!-- Main Playfield Canvas -->
+<main class="flex-1 w-full h-full relative grid-bg pt-16 md:pl-20 overflow-hidden">
+<!-- Scanline Overlay -->
+<div class="absolute inset-0 scanline z-10"></div>
+<!-- Signal Strength HUD -->
+<div class="absolute top-20 right-margin-desktop z-20 flex flex-col gap-2 p-4 bg-surface-container/50 border border-primary/20 backdrop-blur-md rounded-lg w-48">
+<div class="flex justify-between items-center">
+<span class="font-label-tech text-label-tech text-primary">SIGNAL</span>
+<span class="font-label-tech text-label-tech text-primary-container">85%</span>
+</div>
+<div class="w-full h-2 bg-surface border border-primary/30 flex p-[1px]">
+<div class="h-full bg-primary-container w-[85%] shadow-[0_0_5px_#00f0ff]"></div>
+</div>
+</div>
+<!-- The 'Playfield' Entities -->
+<div class="absolute inset-0 flex items-center justify-center perspective-[1000px] z-0">
+<!-- Central Pulsing Signal -->
+<div class="w-6 h-6 rounded-full bg-primary-container shadow-[0_0_20px_#00f0ff,inset_0_0_10px_#fff] glow-pulse absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-30"></div>
+<!-- Approaching Circuit Gate (Rotating) -->
+<div class="absolute w-64 h-64 border-4 border-primary/50 border-dashed rounded-full animate-[spin_10s_linear_infinite] shadow-[0_0_15px_rgba(0,219,233,0.2)] flex items-center justify-center transform-gpu -translate-z-64 opacity-60">
+<!-- Inner gate detail -->
+<div class="w-48 h-48 border-2 border-secondary/40 rounded-full absolute flex items-center justify-center">
+<!-- Data nodes on gate -->
+<div class="absolute top-0 w-2 h-4 bg-secondary shadow-[0_0_8px_#fface8]"></div>
+<div class="absolute bottom-0 w-2 h-4 bg-secondary shadow-[0_0_8px_#fface8]"></div>
+<div class="absolute left-0 w-4 h-2 bg-secondary shadow-[0_0_8px_#fface8]"></div>
+<div class="absolute right-0 w-4 h-2 bg-secondary shadow-[0_0_8px_#fface8]"></div>
+</div>
+</div>
+<!-- Distant Circuit Gate -->
+<div class="absolute w-32 h-32 border-2 border-primary/30 rounded-full shadow-[0_0_5px_rgba(0,219,233,0.1)] flex items-center justify-center transform-gpu -translate-z-128 opacity-30"></div>
+<!-- Overload Zone (Magenta) -->
+<div class="absolute bottom-1/4 left-1/4 w-32 h-1 border-t-2 border-secondary border-dashed transform -rotate-45 shadow-[0_0_10px_#fface8] opacity-50"></div>
+<div class="absolute top-1/4 right-1/4 w-48 h-1 border-t-2 border-secondary border-dashed transform rotate-12 shadow-[0_0_10px_#fface8] opacity-50"></div>
+</div>
+<!-- Start Game Overlay (Initially Active for prompt) -->
+<div class="absolute inset-0 bg-background/80 backdrop-blur-sm flex flex-col items-center justify-center z-40" id="start-overlay">
+<h1 class="font-display-lg text-display-lg text-primary mb-8 tracking-widest text-center shadow-black drop-shadow-lg">SYSTEM<br/>READY</h1>
+<button class="bg-primary/10 border-2 border-primary text-primary px-8 py-4 font-headline-md text-headline-md uppercase tracking-wider hover:bg-primary/20 hover:shadow-[0_0_20px_#00f0ff] transition-all duration-300 relative group overflow-hidden">
+<span class="relative z-10 flex items-center gap-2">
+<span class="material-symbols-outlined">play_arrow</span>
+                    START_GAME
+                </span>
+<div class="absolute inset-0 bg-primary/20 translate-x-[-100%] group-hover:translate-x-0 transition-transform duration-300 ease-out z-0"></div>
+</button>
+<div class="mt-8 flex gap-4 text-outline-variant font-label-tech text-label-tech">
+<span class="flex items-center gap-1 border border-outline-variant/30 px-2 py-1"><span class="material-symbols-outlined text-sm">keyboard</span> ARROWS TO MOVE</span>
+<span class="flex items-center gap-1 border border-outline-variant/30 px-2 py-1"><span class="material-symbols-outlined text-sm">keyboard_return</span> SPACE TO BOOST</span>
+</div>
+</div>
+<!-- Pause Overlay (Hidden by default, structure provided) -->
+<div class="hidden absolute inset-0 bg-surface-container-low/90 backdrop-blur-md flex flex-col items-center justify-center z-40 border-[4px] border-secondary/20 m-4 rounded-lg" id="pause-overlay">
+<div class="font-display-lg text-display-lg text-secondary mb-2 tracking-[0.2em] shadow-[0_0_20px_#fface8] drop-shadow-lg">PAUSED</div>
+<div class="font-label-tech text-label-tech text-secondary/70 mb-12">SIGNAL_INTERRUPT</div>
+<div class="flex flex-col gap-4 w-64">
+<button class="w-full bg-secondary-container text-on-secondary-container px-6 py-3 font-headline-md text-headline-md uppercase text-center border border-secondary shadow-[0_0_15px_#ff24e4] hover:bg-secondary hover:text-on-secondary transition-all">
+                    RESUME_LINK
+                </button>
+<button class="w-full bg-surface-bright text-on-surface px-6 py-3 font-label-tech text-label-tech uppercase text-center border border-outline-variant hover:border-secondary hover:text-secondary transition-all">
+                    RESTART_SEQ
+                </button>
+<button class="w-full bg-surface-bright text-error px-6 py-3 font-label-tech text-label-tech uppercase text-center border border-error/50 hover:bg-error/10 transition-all mt-4">
+                    ABORT
+                </button>
+</div>
+</div>
+</main>
+<!-- Footer -->
+<footer class="fixed bottom-2 right-4 z-50 flex gap-4 bg-transparent hidden md:flex">
+<span class="font-label-tech text-[10px] text-tertiary-fixed-dim">v0.4.2_ALPHA // CORE_SYSTEM_ACTIVE</span>
+<span class="font-label-tech text-[10px] text-tertiary/40 hover:text-tertiary-fixed cursor-pointer">V-SYNC</span>
+<span class="font-label-tech text-[10px] text-tertiary/40 hover:text-tertiary-fixed cursor-pointer">BUFFER_NORMAL</span>
+</footer>
+<script>
+        // Simple interaction to hide start overlay to simulate gameplay start
+        document.querySelector('#start-overlay button').addEventListener('click', function() {
+            document.getElementById('start-overlay').style.display = 'none';
+        });
+        
+        // Simulating pause button toggle (desktop side nav)
+        const pauseBtn = document.querySelectorAll('aside button')[1];
+        const pauseOverlay = document.getElementById('pause-overlay');
+        
+        if(pauseBtn && pauseOverlay) {
+             pauseBtn.addEventListener('click', () => {
+                 pauseOverlay.classList.toggle('hidden');
+             });
+        }
+        
+        // Resume button in pause menu
+         const resumeBtn = document.querySelector('#pause-overlay button');
+         if(resumeBtn && pauseOverlay) {
+             resumeBtn.addEventListener('click', () => {
+                 pauseOverlay.classList.add('hidden');
+             });
+         }
+    </script>
+</body></html>

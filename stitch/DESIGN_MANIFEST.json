@@ -1,0 +1,24 @@
+[
+  {
+    "screenId": "e7ddae9dbda94a538b301881c7e4fec0",
+    "title": "Gameplay - CircuitDash Lite",
+    "htmlFile": "e7ddae9dbda94a538b301881c7e4fec0.html",
+    "deviceType": "DESKTOP",
+    "htmlUrl": "https://contribution.usercontent.google.com/download?c=CgthaWRhX2NvZGVmeBJ8Eh1hcHBfY29tcGFuaW9uX2dlbmVyYXRlZF9maWxlcxpbCiVodG1sXzNjM2I1ZTM0MDg5NjQ0ZmM5YWQxNWUxY2Q3OGViYjhmEgsSBxCN19Wi9xcYAZIBJAoKcHJvamVjdF9pZBIWQhQxMjUwNTc1ODc5NzY3ODkyNzYwNg&filename=&opi=96797242",
+    "localHtml": "/Users/setrox/projects/circuitdash-lite-e9cab604/stitch/e7ddae9dbda94a538b301881c7e4fec0.html",
+    "surfaceIds": [
+      "SURF_GAMEPLAY"
+    ]
+  },
+  {
+    "screenId": "8ac2b5d7c5bc400fada18483995ca29c",
+    "title": "Game Settings - CircuitDash Lite",
+    "htmlFile": "8ac2b5d7c5bc400fada18483995ca29c.html",
+    "deviceType": "DESKTOP",
+    "htmlUrl": "https://contribution.usercontent.google.com/download?c=CgthaWRhX2NvZGVmeBJ8Eh1hcHBfY29tcGFuaW9uX2dlbmVyYXRlZF9maWxlcxpbCiVodG1sXzg2MzhjM2JhNWEwZTQxMjI4MjViZjNmYzEyYWU0YzU3EgsSBxCN19Wi9xcYAZIBJAoKcHJvamVjdF9pZBIWQhQxMjUwNTc1ODc5NzY3ODkyNzYwNg&filename=&opi=96797242",
+    "localHtml": "/Users/setrox/projects/circuitdash-lite-e9cab604/stitch/8ac2b5d7c5bc400fada18483995ca29c.html",
+    "surfaceIds": [
+      "SURF_GAME_SETTINGS"
+    ]
+  }
+]

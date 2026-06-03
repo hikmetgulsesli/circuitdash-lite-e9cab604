@@ -1,0 +1,20 @@
+[
+  {
+    "screenId": "e7ddae9dbda94a538b301881c7e4fec0",
+    "name": "Gameplay - CircuitDash Lite",
+    "type": "game",
+    "description": "Gameplay - CircuitDash Lite screen",
+    "surfaceIds": [
+      "SURF_GAMEPLAY"
+    ]
+  },
+  {
+    "screenId": "8ac2b5d7c5bc400fada18483995ca29c",
+    "name": "Game Settings - CircuitDash Lite",
+    "type": "settings",
+    "description": "Game Settings - CircuitDash Lite screen",
+    "surfaceIds": [
+      "SURF_GAME_SETTINGS"
+    ]
+  }
+]
