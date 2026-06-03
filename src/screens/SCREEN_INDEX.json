@@ -1,0 +1,176 @@
+[
+  {
+    "screenId": "e7ddae9dbda94a538b301881c7e4fec0",
+    "title": "Gameplay - CircuitDash Lite",
+    "componentName": "GameplayCircuitdashLite",
+    "file": "src/screens/GameplayCircuitdashLite.tsx",
+    "buttons": 8,
+    "inputs": 0,
+    "links": 0,
+    "actions": [
+      {
+        "id": "restart-1",
+        "kind": "button",
+        "label": "RESTART",
+        "index": 0
+      },
+      {
+        "id": "pause-2",
+        "kind": "button",
+        "label": "PAUSE",
+        "index": 1
+      },
+      {
+        "id": "settings-3",
+        "kind": "button",
+        "label": "SETTINGS",
+        "index": 2
+      },
+      {
+        "id": "exit-4",
+        "kind": "button",
+        "label": "EXIT",
+        "index": 3
+      },
+      {
+        "id": "start-game-5",
+        "kind": "button",
+        "label": "START_GAME",
+        "index": 4
+      },
+      {
+        "id": "resume-link-6",
+        "kind": "button",
+        "label": "RESUME_LINK",
+        "index": 5
+      },
+      {
+        "id": "restart-seq-7",
+        "kind": "button",
+        "label": "RESTART_SEQ",
+        "index": 6
+      },
+      {
+        "id": "abort-8",
+        "kind": "button",
+        "label": "ABORT",
+        "index": 7
+      }
+    ]
+  },
+  {
+    "screenId": "8ac2b5d7c5bc400fada18483995ca29c",
+    "title": "Game Settings - CircuitDash Lite",
+    "componentName": "GameSettingsCircuitdashLite",
+    "file": "src/screens/GameSettingsCircuitdashLite.tsx",
+    "buttons": 8,
+    "inputs": 2,
+    "links": 8,
+    "actions": [
+      {
+        "id": "overdrive-1",
+        "kind": "button",
+        "label": "OVERDRIVE",
+        "index": 0
+      },
+      {
+        "id": "close-2",
+        "kind": "button",
+        "label": "Close",
+        "index": 1
+      },
+      {
+        "id": "lite-3",
+        "kind": "button",
+        "label": "LITE",
+        "index": 2
+      },
+      {
+        "id": "normal-4",
+        "kind": "button",
+        "label": "NORMAL",
+        "index": 3
+      },
+      {
+        "id": "overdrive-5",
+        "kind": "button",
+        "label": "OVERDRIVE",
+        "index": 4
+      },
+      {
+        "id": "reset-preferences-6",
+        "kind": "button",
+        "label": "RESET PREFERENCES",
+        "index": 5
+      },
+      {
+        "id": "return-to-game-7",
+        "kind": "button",
+        "label": "RETURN TO GAME",
+        "index": 6
+      },
+      {
+        "id": "save-preferences-8",
+        "kind": "button",
+        "label": "SAVE PREFERENCES",
+        "index": 7
+      },
+      {
+        "id": "lvl-04-1",
+        "kind": "link",
+        "label": "LVL_04",
+        "href": "#",
+        "index": 0
+      },
+      {
+        "id": "spd-x2-2",
+        "kind": "link",
+        "label": "SPD_X2",
+        "href": "#",
+        "index": 1
+      },
+      {
+        "id": "restart-3",
+        "kind": "link",
+        "label": "RESTART",
+        "href": "#",
+        "index": 2
+      },
+      {
+        "id": "pause-4",
+        "kind": "link",
+        "label": "PAUSE",
+        "href": "#",
+        "index": 3
+      },
+      {
+        "id": "settings-5",
+        "kind": "link",
+        "label": "SETTINGS",
+        "href": "#",
+        "index": 4
+      },
+      {
+        "id": "exit-6",
+        "kind": "link",
+        "label": "EXIT",
+        "href": "#",
+        "index": 5
+      },
+      {
+        "id": "v-sync-7",
+        "kind": "link",
+        "label": "V-SYNC",
+        "href": "#",
+        "index": 6
+      },
+      {
+        "id": "buffer-normal-8",
+        "kind": "link",
+        "label": "BUFFER_NORMAL",
+        "href": "#",
+        "index": 7
+      }
+    ]
+  }
+]
